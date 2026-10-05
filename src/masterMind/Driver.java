@@ -22,15 +22,15 @@ public class Driver {
 		String poging3;
 		String poging4;
 
-		String check1= niks;
-		String check2= niks;
-		String check3= niks;
-		String check4= niks;
+		String check1 = niks;
+		String check2 = niks;
+		String check3 = niks;
+		String check4 = niks;
 
-		String code1 = rood;
-		String code2 = paars;
-		String code3 = bruin;
-		String code4 = geel;
+		String code1 = geel;
+		String code2 = groen;
+		String code3 = groen;
+		String code4 = groen;
 
 		boolean heeftGewonnen = false;
 
@@ -107,9 +107,11 @@ public class Driver {
 			System.out.println(check1 + ", " + check2 + ", " + check3 + ", " + check4);
 		}
 		if (heeftGewonnen == true) {
-			System.out.println("Je hebt de code gekraakt! Gefeliciteerd! Het was inderdaad: " + code1 + ", " + code2 + ", " + code3 + ", " + code4);
+			System.out.println("Je hebt de code gekraakt! Gefeliciteerd! Het was inderdaad: " + code1 + ", " + code2
+					+ ", " + code3 + ", " + code4);
 		} else {
-			System.out.println("je hebt verloren! Wat jammer :(, je mag het opnieuw proberen of je mag de pot op, domme sukkel");
+			System.out.println(
+					"je hebt verloren! Wat jammer :(, je mag het opnieuw proberen of je mag de pot op, domme sukkel");
 		}
 
 	}
