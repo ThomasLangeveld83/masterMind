@@ -6,22 +6,16 @@ public class Driver {
 	public static void main(String[] args) {
 		Scanner console = new Scanner(System.in);
 
-		String rood = "rood";
-		String blauw = "blauw";
-		String paars = "paars";
-		String groen = "groen";
-		String geel = "geel";
-		String bruin = "bruin";
+		// opzet van spel
 
-		String wit = "wit";
-		String zwart = "zwart";
-		String niks = "niks";
+		String[] kleuren = { "rood", "blauw", "paars", "groen", "geel", "bruin" };
+		String[] kleurenCheck = { "wit", "niks", "zwart" };
 
 		String[] pogingen = new String[4];
 
 		String[] checks = new String[4];
 
-		String[] code = { geel, groen, groen, groen };
+		String[] code = { kleuren[4], kleuren[3], kleuren[3], kleuren[3] };
 
 		boolean heeftGewonnen = false;
 
@@ -35,13 +29,13 @@ public class Driver {
 
 			}
 			for (int numering = 0; numering < 4; numering++) {
-				checks[numering] = niks;
+				checks[numering] = kleurenCheck[1];
 				if (pogingen[numering].equals(code[numering])) {
-					checks[numering] = zwart;
+					checks[numering] = kleurenCheck[2];
 				} else {
 					for (int i = 0; i < 4; i++) {
 						if (pogingen[numering].equals(code[i])) {
-							checks[numering] = wit;
+							checks[numering] = kleurenCheck[0];
 						}
 
 					}
@@ -50,7 +44,7 @@ public class Driver {
 
 				heeftGewonnen = true;
 				for (int p = 0; p < 4; p++) {
-					if (checks[p] != zwart) {
+					if (checks[p] != kleurenCheck[2]) {
 						heeftGewonnen = false;
 
 					}
